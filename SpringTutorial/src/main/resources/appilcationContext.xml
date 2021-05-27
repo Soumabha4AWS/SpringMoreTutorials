@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean id="componentXmlDAO" 
+  		class="com.learningSpring.springBootTutorial.xml.ComponentXmlDAO">
+    <property name="componentXmlJdbcConnection" ref="componentXmlJdbcConnection" />
+  </bean>
+  
+  <bean id="componentXmlJdbcConnection" 
+  		class="com.learningSpring.springBootTutorial.xml.ComponentXmlJdbcConnection">
+  </bean>  
+
+   <bean id="binarySearchImpl3" 
+  		class="com.learningSpring.springBootTutorial.basic.BinarySearchImpl3">
+    <property name="bubbleSortAlgorithm3" ref="bubbleSortAlgorithm3" />
+    <property name="quickSortAlgorithm3" ref="quickSortAlgorithm3" />
+  </bean>
+  
+  <bean id="bubbleSortAlgorithm3" 
+  		class="com.learningSpring.springBootTutorial.basic.BubbleSortAlgorithm3">
+  </bean> 
+
+  <bean id="quickSortAlgorithm3" 
+  		class="com.learningSpring.springBootTutorial.basic.QuickSortAlgorithm3">
+  </bean> 
+  
+   <bean id="binarySearchImpl4" 
+  		class="com.learningSpring.springBootTutorial.basic.BinarySearchImpl4">
+    <property name="bubbleSortAlgorithm" ref="bubbleSortAlgorithm" />
+    <property name="quickSortAlgorithm" ref="quickSortAlgorithm" />
+  </bean>
+  
+  <bean id="bubbleSortAlgorithm" 
+  		class="com.learningSpring.springBootTutorial.basic.BubbleSortAlgorithm4">
+  </bean>   
+
+  <bean id="quickSortAlgorithm" 
+  		class="com.learningSpring.springBootTutorial.basic.QuickSortAlgorithm4">
+  </bean> 
+
+</beans> 

@@ -1,0 +1,52 @@
+package webapp;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+//Java Platform, Enterprise Edition (Java EE) JEE6
+
+/* 
+ * 
+ *  Servlet is a Java programming language class used to extend the capabilities of servers 
+ *  that host applications accessed by means of a request-response programming model.
+ *  1. extends javax.servlet.http.HttpServlet
+ *  2. @WebServlet(urlPatterns = "/login0.do")
+ *  3. doGet(HttpServletRequest request, HttpServletResponse response)
+ *  4. How is the response created?
+ *  
+ */
+
+
+@WebServlet(urlPatterns = "/login0.do")
+public class LoginServlet0 extends HttpServlet {
+
+	
+	private static final long serialVersionUID = 6886933344657784107L;
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		
+		
+		PrintWriter out = response.getWriter();
+		System.out.println("*********** HTML Writing Starts *************");
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("My First Servlet");
+		out.println("</body>");
+		out.println("</html>");
+		System.out.println("*********** HTML Writing Ends *************");
+
+	}
+
+}
